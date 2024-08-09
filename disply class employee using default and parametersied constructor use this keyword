@@ -1,0 +1,46 @@
+/*Create an employee class(id,name,dept name,salary).
+Define a default and parameterized constructor use
+'this'keyword to inatilize instance variables
+keep a count of object created.create object using
+ parametrised constructor and display the object count 
+ after each object is created(use static member and method)
+ also display the contents of each object*/
+class employee
+{
+  static int cnt=0;
+  int id;
+  String name,dept;
+  float sal;
+  employee()
+  {
+      cnt++;
+      id=1;
+      name="sai";
+      dept="computer";
+      sal=970000;
+  }
+  employee(int id,String name,String dept,float sal)
+  {
+     cnt++;
+     
+     this.id=id;
+     this.name=name;
+     this.dept=dept;
+     this.sal=sal;
+  }
+  void disp()
+  {
+     System.out.println("\n object count="+cnt);
+     System.out.println("\n emp id="+id);
+     System.out.println("\n emp name="+name);
+     System.out.println("\n emp dapartment="+dept);
+     System.out.println("\n emp salary="+sal);
+  }
+  public static void main(String[]abc)
+  {
+     employee ob=new employee();
+     ob.disp();
+     employee obj=new employee(10,"aman","account",7000);
+     obj.disp();
+  }
+}
