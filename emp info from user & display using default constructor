@@ -1,0 +1,29 @@
+/*create a class employee (eno,ename,salary)
+accept emp information from user and 
+display using default constructor*/
+import java.util.*;
+class emp
+{
+  int eno;
+  String ename;
+  float sal;
+  emp()
+  {
+      Scanner sc=new Scanner(System.in);
+      System.out.println("enter emp no");
+        eno=sc.nextInt();
+      System.out.println("enter emp name");
+        ename=sc.next();
+      System.out.println("enter emp sal");
+        sal=sc.nextFloat();
+     System.out.println("Emp number="+eno);
+     System.out.println("Emp name="+ename);
+     System.out.println("Salary="+sal);
+  }
+  public static void main(String arg[])
+  {
+     emp ob=new emp();
+  }
+}
+        
+  
