@@ -1,0 +1,35 @@
+*/ Write a program for multilevel inheritance such that country is inherated from containt .
+  state in inherated form country display the place state country and containt/*
+class A
+{
+   int x,y,z;
+   A()
+   {
+      x=11;
+      System.out.println("I am base A");
+   }
+}
+class B extends A
+{
+   B()
+   {
+       y=55;
+       System.out.println("i am intermidate B");
+   }
+}
+class C extends B
+{
+   C()
+   {
+     z=22;
+       System.out.println("i am derived c");
+       System.out.println("Addition="+(x+y+z));
+   }
+}
+class MDemo
+{
+    public static void main(String arg[])
+    {
+       C ob=new C();
+    }
+}
