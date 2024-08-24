@@ -1,5 +1,4 @@
-*/ Write a program for multilevel inheritance such that country is inherated from containt .
-  state in inherated form country display the place state country and containt/*
+
 class A
 {
    int x,y,z;
