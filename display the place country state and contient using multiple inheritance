@@ -1,0 +1,52 @@
+*/ Write a program for multilevel inheritance such that country is inherated from containt .
+  state in inherated form country display the place state country and containt*/
+import java.util.*;
+class contient
+{
+   String continame;
+   Scanner sc=new Scanner(System.in);
+   void acceptconti()
+   {
+      System.out.println("enter contient name");
+      continame=sc.next();
+   }
+}
+class country extends contient
+{
+    String countryname;
+    void acceptcountry()
+    {
+        System.out.println("enter country name");
+        countryname=sc.next();
+    }
+}
+class state extends country
+{
+    String statename,place;
+    void acceptstate()
+    {
+        System.out.println("enter state name");
+        statename=sc.next();
+        System.out.println("enter place");
+        place=sc.next();
+    }
+    void disp()
+{
+    System.out.println("continent name="+continame);
+    System.out.println("country name="+countryname);
+    System.out.println("state name="+statename);
+    System.out.println("place name="+place);   
+}
+}
+
+class MDemo
+{
+   public static void main(String arg[])
+   {
+      state ob=new state();
+      ob.acceptconti();
+      ob.acceptcountry();
+      ob.acceptstate();
+      ob.disp();
+   }
+}
