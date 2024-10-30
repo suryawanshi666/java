@@ -1,0 +1,79 @@
+/*Write a program to find the cube of given number using functional interface.*/
+Slip10_1: 
+package Slips;
+import java.util.*;
+interface Cube
+{
+	float cube();
+}
+class slip10_1 implements Cube
+{
+	public float cube()
+	{
+		System.out.println("enter the number");
+		Scanner sc= new Scanner (System.in);
+		float cu = sc.nextFloat();
+		double cue = cu*cu*cu;
+		System.out.println("cube of no is:"+cue);
+		return 0;
+	}
+	public static void main(String args[])
+	{
+		slip10_1 d = new slip10_1();
+		d.cube();
+	}
+}
+
+/*Write a program to create a package name student. Define class StudentInfo
+with method to display information about student such as rollno, class, and percentage.
+Create another class StudentPer with method to find percentage of the student. Accept
+student details like rollno, name, class and marks of 6 subject from user. */
+
+package Student;
+public class StudentInfo 
+{
+	public void disp(int rno,String name,String c,float p)
+	{
+		System.out.println("Roll="+rno);
+		System.out.println("Name="+name);
+		System.out.println("Class="+c);
+		System.out.println("Percentage"+p);
+	}
+}
+
+
+package Student;
+public class StudentPer 
+{
+	public float clac(int m[])
+	{
+		float p=(m[0]+m[1]+m[2]+m[3]+m[4]+m[5])/6;
+		return p;
+	}
+}
+
+
+import Student.StudentInfo;
+import Student.StudentPer;
+import java.util.*;
+public class StudDemo 
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Roll_No");
+		int rno=sc.nextInt();
+		System.out.println("Enter Name");
+		String name=sc.next();
+		System.out.println("Enter Class");
+		String c=sc.next();
+		System.out.println("Enter Six Subject Marks:");
+		int m[]=new int[6];
+		for(int i=0;i<6;i++)
+			m[i]=sc.nextInt();
+		StudentPer ob=new StudentPer();
+		float p=ob.clac(m);
+		StudentInfo ob1=new StudentInfo();
+		ob1.disp(rno,name,c,p);
+	}
+}
